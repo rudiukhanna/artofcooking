@@ -53,7 +53,7 @@ ul {
   cursor: pointer;
 }
 
-.catalogue-btn {
+.menu-btn {
   width: 150px;
   height: 50px;
   border: none;
@@ -97,6 +97,17 @@ ul {
   font-size: 16px;
   font-weight: 500;
   line-height: 1.2;
+}
+
+.menu-popup {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  overflow-y: auto;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  display: none;
+  padding: 10px;
 }
 
 .header .header__top {
@@ -171,10 +182,16 @@ ul {
   line-height: 1.25;
   text-transform: uppercase;
 }
-.header .header__bottom .menu__catalogue {
+.header .header__bottom .menu__buttons-wrapper {
   display: flex;
   gap: 16px;
   align-items: center;
+}
+.header .header__bottom .menu__buttons-wrapper .menu__catalogue-btn {
+  position: relative;
+}
+.header .header__bottom .menu__buttons-wrapper .menu__catalogue-btn:hover .menu-popup {
+  display: block;
 }
 .header .header__bottom .menu__icons {
   display: flex;

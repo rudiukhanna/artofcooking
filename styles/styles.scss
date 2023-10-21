@@ -46,7 +46,7 @@ a {
     cursor: pointer;
  }
 
- .catalogue-btn {
+ .menu-btn {
     width: 150px;
     height: 50px;
     border: none;
@@ -93,6 +93,21 @@ a {
         font-weight: 500;
         line-height: 1.2;
   } 
+
+  .menu-popup {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    overflow-y: auto;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    display: none;
+    padding: 10px;
+  }
+
+  .menu-column {
+    
+  }
   
 .header {
     .header__top {
@@ -181,10 +196,18 @@ a {
             }
         }
 
-        .menu__catalogue {
+        .menu__buttons-wrapper {
             display: flex;
             gap: 16px;
             align-items: center;
+
+            .menu__catalogue-btn {
+                position: relative;
+            }
+
+            .menu__catalogue-btn:hover .menu-popup {
+                display: block;
+            }
         }
 
         .menu__icons {
