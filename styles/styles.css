@@ -7,6 +7,7 @@
   --color-business-btn-grey: #9C9C9C;
   --color-footer-border: #242424;
   --color-input: rgba(156, 156, 156, 0.45);
+  --color-submenu: #F6F6F6;
 }
 
 *, *:before, *:after {
@@ -99,17 +100,6 @@ ul {
   line-height: 1.2;
 }
 
-.menu-popup {
-  position: absolute;
-  width: 400px;
-  height: 400px;
-  overflow-y: auto;
-  background-color: #ffffff;
-  border: 1px solid #cccccc;
-  display: none;
-  padding: 10px;
-}
-
 .header .header__top {
   height: 38px;
   display: flex;
@@ -171,11 +161,11 @@ ul {
   align-items: center;
   background-color: var(--color-white);
 }
-.header .header__bottom ul {
+.header .header__bottom .header__nav-item {
   display: flex;
   gap: 56px;
 }
-.header .header__bottom ul li > a {
+.header .header__bottom .header__nav-item li > a {
   color: var(--color-black);
   font-size: 16px;
   font-weight: 600;
@@ -187,11 +177,63 @@ ul {
   gap: 16px;
   align-items: center;
 }
-.header .header__bottom .menu__buttons-wrapper .menu__catalogue-btn {
-  position: relative;
+.header .header__bottom .menu__buttons-wrapper .menu__catalogue-btn .topmenu {
+  display: flex;
+  padding: 0;
 }
-.header .header__bottom .menu__buttons-wrapper .menu__catalogue-btn:hover .menu-popup {
+.header .header__bottom .menu__buttons-wrapper .menu__catalogue-btn .topmenu li:hover > .submenu {
+  opacity: 1;
+  visibility: visible;
+  transform: rotateX(0deg);
+}
+.header .header__bottom .menu__buttons-wrapper .menu__catalogue-btn .topmenu > .submenu-item {
+  text-decoration: none;
+  color: var(--color-black);
+  padding: 11px 20px;
+  display: inline-block;
+  border-bottom: 1px solid var(--color-grey);
+  background-color: var(--color-submenu);
+  box-shadow: 1px 0px 8px 0px rgba(0, 0, 0, 0.2);
+}
+.header .header__bottom .menu__buttons-wrapper .menu__catalogue-btn .submenu {
+  position: absolute;
+  left: 245px;
+  z-index: 5;
+  transform-origin: 0 0;
+  transform: rotateX(-90deg);
+  transition: 0.3s linear;
+  visibility: hidden;
+  opacity: 0;
+}
+.header .header__bottom .menu__buttons-wrapper .menu__catalogue-btn .submenu li {
+  position: relative;
+  width: 280px;
+  height: 43px;
+  border-bottom: 1px solid var(--color-grey);
+  background-color: var(--color-white);
+  border-right: 1px solid var(--color-grey);
+}
+.header .header__bottom .menu__buttons-wrapper .menu__catalogue-btn .submenu a:hover {
+  color: var(--accent-color);
+}
+.header .header__bottom .menu__buttons-wrapper .menu__catalogue-btn .submenu .submenu {
+  position: absolute;
+  top: -43px;
+  left: 86%;
+  transition: 0.3s linear;
+}
+.header .header__bottom .menu__buttons-wrapper .menu__catalogue-btn .submenu .submenu .submenu-item {
+  background-color: var(--color-submenu);
+  border-bottom: 1px solid var(--color-grey);
+}
+.header .header__bottom .menu__buttons-wrapper .submenu a {
   display: block;
+  padding: 11px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.3;
+  text-transform: uppercase;
+  color: var(--color-black);
 }
 .header .header__bottom .menu__icons {
   display: flex;
