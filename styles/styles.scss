@@ -234,13 +234,18 @@ a {
                     visibility: hidden;
                     opacity: 0;
 
-                    & li {
+                    & li, 
+                    & .menu-item {
                         position: relative;
                         width: 280px;
                         height: 43px;
                         border-bottom: 1px solid var(--color-grey);
                         background-color: var(--color-white);
                         border-right: 1px solid var(--color-grey);
+                    }
+
+                    & .menu-item:last-child {
+                        border-radius: 0px 0px 0px 9px;
                     }
 
                     & a:hover {
@@ -256,7 +261,16 @@ a {
                          & .submenu-item {
                             background-color: var(--color-submenu);
                             border-bottom: 1px solid var(--color-grey);
+
+                            & .card-wrapper {
+                                display: flex;
+
+                                
+                            }
+
                          }
+
+                        
                     }
                 }
                 }
