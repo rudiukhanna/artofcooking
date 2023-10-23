@@ -99,18 +99,12 @@ a {
         line-height: 1.2;
   } 
 
-//   .menu-popup {
-//     position: absolute;
-//     width: 400px;
-//     height: 400px;
-//     overflow-y: auto;
-//     background-color: #ffffff;
-//     border: 1px solid #cccccc;
-//     display: none;
-//     padding: 10px;
-//   }
-
 .header {
+
+    .header__mobile {
+        display: none;
+    }
+    
     .header__top {
         height: 38px;
         display: flex;
@@ -429,3 +423,8 @@ a {
        
     }
 }
+
+// media queries
+  @import 'media';
+
+
