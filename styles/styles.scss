@@ -18,11 +18,6 @@ body {
     margin: 0 auto;
 }
 
-
-// inline
-
-// end inline
-
 a {
     text-decoration: none;
 }
@@ -104,7 +99,7 @@ a {
     .header__mobile {
         display: none;
     }
-    
+
     .header__top {
         height: 38px;
         display: flex;
@@ -220,7 +215,7 @@ a {
                 
                 .submenu {
                     position: absolute;
-                    left: 245px;
+                    left: 375px;
                     z-index: 5;
                     transform-origin: 0 0;
                     transform: rotateX(-90deg);
@@ -255,16 +250,12 @@ a {
                          & .submenu-item {
                             background-color: var(--color-submenu);
                             border-bottom: 1px solid var(--color-grey);
+                         }  
 
-                            & .card-wrapper {
-                                display: flex;
-
-                                
-                            }
-
-                         }
-
-                        
+                    & .submenu .submenu {
+                        top: 0;
+                        left: 86%;
+                    }
                     }
                 }
                 }
@@ -289,7 +280,19 @@ a {
 
 }
 
+// Box-content
+.main {
+    &__content-mobile {
+        display: none;
+    }
+}
+
 .footer {
+    .footer__mobile,
+    .mobile {
+        display: none;
+    }
+
     background-color: var(--color-black);
     color: var(--color-white);
 
